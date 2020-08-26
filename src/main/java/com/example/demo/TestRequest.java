@@ -1,4 +1,4 @@
-package resttemplate;
+package com.example.demo;
 
 public class TestRequest {
 }

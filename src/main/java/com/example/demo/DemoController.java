@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,5 +27,11 @@ public class DemoController {
     @GetMapping("/find/{id}")
     public Customer findCustomerById(@PathVariable Integer id) {
         return customerRepository.findCustomerById(id);
+    }
+
+    @GetMapping("/listJson")
+    public String getCustomersJson(){
+        Gson gson = new Gson();
+        return gson.toJson(getCustomers());
     }
 }
