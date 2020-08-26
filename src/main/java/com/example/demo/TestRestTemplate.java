@@ -27,7 +27,6 @@ public class TestRestTemplate {
         ResponseEntity<List<TestResponse>> response = restTemplate.exchange(URL, HttpMethod.GET, null, new ParameterizedTypeReference<List<TestResponse>>(){});
         List<TestResponse> body = response.getBody();
 
-        System.out.println(body);
         return body;
     }
 }
