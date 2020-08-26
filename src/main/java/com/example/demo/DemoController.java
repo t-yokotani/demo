@@ -28,10 +28,4 @@ public class DemoController {
     public Customer findCustomerById(@PathVariable Integer id) {
         return customerRepository.findCustomerById(id);
     }
-
-    @GetMapping("/listJson")
-    public String getCustomersJson(){
-        Gson gson = new Gson();
-        return gson.toJson(getCustomers());
-    }
 }
